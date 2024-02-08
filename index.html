@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--permite insertar caracteres especiales, ej: comparación se visualiza de correcta forma la ó-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permite compatibilidad y zoom-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--permite compatibilida con dispositivos antiguos-->
+    <title>L'anciova</title>
+    <script src="https://kit.fontawesome.com/897ebae65a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class=" contenedor-navegacion">
+            <div class="contenido-navegacion contenedor ">
+                <div class="logo">
+                    <h2 id="inicio"> <span class="verde">L'an</span><span class="blanco">cio</span><span
+                            class="rojo">va</span> Ristorante</h2>
+                </div>
+                <nav class="navegacion ocultar">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#somos">¿Quienes Somos?</a>
+                    <a href="#menu">Menú</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#">Iniciar Sesión</a>
+                </nav>
+                <div class="expansive">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido-header">
+            <div class="contenedor-encabezado">
+                <div class="texto-encabezado">
+                    <h2>¡Ben arrivato!</h2>
+                    <a href="#menu" class="btn bordes">Ver menú</a>
+                </div>
+                <img data-src="videos-imagenes/gato.webp" alt="gato.webp">
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor-quienessomos contenedor">
+        <div class="texto-quienessomos">
+            <h1 id="somos">L'anciova Ristorante</h1>
+            <!-- h1 es el téxto mas importante de una página web y debería haber solo 1 por página-->
+            <p>Restaurante italiano ubicado en uno de los barrios más simbólicos y emblemáticos Concepción.
+                Desde su apertura en 1998, lleva ofreciendo una comida auténtica basada en la cocina italiana
+                tradicional.
+                Sus instalaciones recrean un ambiente acogedor, cómodo y hogareño para el disfrute de toda la familia y
+                amigos.
+                La calidad de los productos se respalda por el uso de horno de leña para la elaboración de las pizzas y
+                el pan.
+                Una mesa repleta de productos tradicionales que podrás acompañar gracias a una extensa carta de vinos
+                que incluye ejemplares de
+                origen italiano y español.</p>
+        </div>
+        <div class="imagenes-quienessomos">
+            <div class="imagen1">
+                <img data-src="videos-imagenes/equipotrabajopizzeria.jpg" alt="equipo de trabajo">
+            </div>
+        </div>
+    </div>
+
+    <section class="menu contenedor">
+        <h2 class="texto-platillos" id="menu">Menu</h2>
+        <div class="botones-platillos">
+            <button class="todos btn btn-negro">Todos</button>
+            <button class="ensaladas btn btn-negro">Ensaladas</button>
+            <button class="pasta btn btn-negro">Pasta</button>
+            <button class="pizza btn btn-negro">Pizza</button>
+            <button class="vinos btn btn-negro">Vinos</button>
+        </div>
+        <!-------------------------------ENSALADAS------------------------------->
+        <div class="platillos">
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="videos-imagenes/ensalada1.webp" alt="ensalada">
+                <h2>Ensalada Cesar</h2>
+                <p>Lechuga de la estación, pechuga de pollo, tomate, crutones, nueces, huevo cocido y aderezo cesar</p>
+                <div class="precio">
+                    <p>$6.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="videos-imagenes/ensalada2.webp" alt="ensalada">
+                <h2>Ensalada de la casa</h2>
+                <p>Lechuga de la estación, rúcula, manzana, salsa de yogurt, nueces, queso de cabra y toque de romero
+                </p>
+                <div class="precio">
+                    <p>$6.900</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="videos-imagenes/ensalada3.webp" alt="ensalada">
+                <h2>Ensalada L'anciova</h2>
+                <p>Lechuga de la estación, rúcula, camarón ecuatoriano y berengenas salteadas, queso parmesano y
+                    vinagreta agridulde</p>
+                <div class="precio">
+                    <p>$7.300</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <!-------------------------------ENSALADAS------------------------------->
+
+            <!-------------------------------PASTAS------------------------------->
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="videos-imagenes/fetuccini.webp" alt="pasta">
+                <h2>Fetuccini</h2>
+                <p>Salza boloñesa, camarones y rúcula </p>
+                <div class="precio">
+                    <p>$3.850</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="videos-imagenes/raviolescarne.webp" alt="pasta">
+                <h2>Ravioles de carne</h2>
+                <p>Salza boloñesa, queso parmesano y albahaca</p>
+                <div class="precio">
+                    <p>$3.850</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="videos-imagenes/raviolespollo.webp" alt="pasta">
+                <h2>Ravioles de pollo y champiñon</h2>
+                <p>Salza blanca, pollo, champiñon, queso parmesano y albahaca</p>
+                <div class="precio">
+                    <p>$4.300</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <!-------------------------------PASTAS------------------------------->
+            <!-------------------------------PIZZAS------------------------------->
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="videos-imagenes/pizza1.webp" alt="pizza">
+                <h2>Roma</h2>
+                <p>Base salsa italiana y mozzarella, carne molida, cebolla y aceitunas</p>
+                <div class="precio">
+                    <p>$12.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="videos-imagenes/pizza2.webp" alt="pizza">
+                <h2>Florencia</h2>
+                <p>Salsa italiana, mozzarella, berengenas, zapalllo italiano, jamón ahumado, rúcula y toque de oliva</p>
+                <div class="precio">
+                    <p>$13.700</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="videos-imagenes/pizza3.webp" alt="pizza">
+                <h2>Venecia</h2>
+                <p>Base salsa italiana y mozzarella, palmitos, choclo, champiñón y esparragos</p>
+                <div class="precio">
+                    <p>$12.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="videos-imagenes/pizza4.webp" alt="pizza">
+                <h2>Milán</h2>
+                <p>Base salsa italiana y mozzarella, jamón ahumado, choricillo, pimentón y aceitunas</p>
+                <div class="precio">
+                    <p>$13.900</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="videos-imagenes/pizza6.webp" alt="pizza">
+                <h2>Nápoles</h2>
+                <p>Base salsa italiana y mozzarella, jamón ahumado, tomate natural y aceitunas</p>
+                <div class="precio">
+                    <p>$12.000</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="videos-imagenes/pizza7.webp" alt="pizza">
+                <h2>L'anciova</h2>
+                <p>Salsa italiana, mozzarella, roquefort, tomate natural, rucula, parmesano, prosciutto y aceite de
+                    oliva</p>
+                <div class="precio">
+                    <p>$14.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <!-------------------------------PIZZAS------------------------------->
+            <!-------------------------------VINOS------------------------------->
+            <div class="platillo" data-platillo="vino">
+                <img data-src="videos-imagenes/vino1.webp" alt="vino">
+                <h2>Quelhue Tierra Roja</h2>
+                <p>Sepa Semillon 12.3° alcohol</p>
+                <div class="precio">
+                    <p>$9.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="vino">
+                <img data-src="videos-imagenes/vino2.webp" alt="vino">
+                <h2>Quelhue Tierra Roja</h2>
+                <p>Sepa Moscatel de Alejandria 12° alcohol</p>
+                <div class="precio">
+                    <p>$9.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="vino">
+                <img data-src="videos-imagenes/vino3.webp" alt="vino">
+                <h2>Rupanantu</h2>
+                <p>Sepa Moscatel de Alejandria cosecha tardia 12°alcohol</p>
+                <div class="precio">
+                    <p>$9.500</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="vino">
+                <img data-src="videos-imagenes/vino4.webp" alt="vino">
+                <h2>Cordon Fuego G.R</h2>
+                <p>Sepa Malbec 14.5° alcohol</p>
+                <div class="precio">
+                    <p>$10.600</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="vino">
+                <img data-src="videos-imagenes/vino5.webp" alt="vino">
+                <h2>Nuyun</h2>
+                <p>Sepa Pais 12.9° alcohol</p>
+                <div class="precio">
+                    <p>$10.600</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="vino">
+                <img data-src="videos-imagenes/vino6.webp" alt="vino">
+                <h2>Nuyun Medalla Oro</h2>
+                <p>Sepa Cinsault 13.4° alcohol ( Medalla de Oro Catador World Wine Awards 2021)</p>
+                <div class="precio">
+                    <p>$11.300</p>
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <!-------------------------------VINOS------------------------------->
+    </section>
+
+    <!-------------------------------FORMULARIO------------------------------->
+    <div class="formulario-contacto contenedor">
+        <div class="informacion-contacto">
+            <h3 id="contacto">¿Necesita Contactarnos?</h3>
+            <p><i class="fa-solid fa-location-pin"></i> Concepción, Anibal Pinto 3117</p>
+            <p><i class="fa-solid fa-envelope"></i> L'anciova@gmail.com</p>
+            <p><i class="fa-solid fa-mobile"></i> +569 75668742</p>
+        </div>
+
+        <form class="formulario">
+            <div class="input-formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre" id="nombre">
+            </div>
+            <div class="input-formulario">
+                <label for="apellidos">Apellido</label>
+                <input type="text" placeholder="Ingrese sus apellidos" id="apellido">
+            </div>
+            <div class="input-formulario">
+                <label for="correo">Correo</label>
+                <input type="email" placeholder="ejemplo@correo.com" id="correo">
+            </div>
+            <div class="input-formulario">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" placeholder="ej: +569 12345678" id="telefono">
+            </div>
+            <div class="input-formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea></textarea>
+            </div>
+            <div class="btn-formulario">
+                <input type="submit" class="btn btn-negro" value="Enviar">
+            </div>
+        </form>
+    </div>
+
+    <div class="pie-pagina">
+
+    </div>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados &copy; 2022. L'anciova.</p>
+    </footer>
+
+    <!-------------------------------FORMULARIO------------------------------->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

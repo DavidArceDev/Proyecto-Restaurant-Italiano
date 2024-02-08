@@ -1,0 +1,429 @@
+:root{
+    --verde:#00A149;
+    --blanco:#fff;
+    --rojo:#881014;
+    --oscuro:#000;
+    --titulos:'Arima Madurai', cursive;
+    --parrafos:'Playfair Display', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    /*1rem = 10px*/
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    overflow-x: hidden; /*quita la barra de abajo al abrir el menu*/
+}
+
+*,*::after *::before{
+    box-sizing: inherit;
+}
+/*globales*/
+.contenedor{
+    max-width: 130rem; /*espacio global bordes costados*/
+    margin: 0 auto;
+    width: 95;
+}
+h1,h2{
+    font-family: var(--titulos);
+}
+h3, p, a{
+    font-family: var(--parrafos);
+}
+h1{
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+
+}
+
+.verde{
+    color: var(--verde);
+}
+.rojo{
+    color: var(--rojo);
+}
+.blanco{
+    color: var(--blanco);
+}
+.ocultar{
+    display: none;
+}
+.btn-cerrar{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blanco);
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    user-select: none; /*no se selecciona cuando se clickea*/
+}
+.pantalla-completa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5); /*a = alpha o transparencia*/
+    z-index: 4; /*como se sobreponen los elementos, el que tiene el n°mayor se sobrepone encima del otro*/
+}
+
+@keyframes desplazamiento{
+    0%{
+        transform: translateX(100%)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.btn-cerrar:hover{ /*cursor encima de la "x" mostrar la mano*/
+    cursor: pointer;
+}
+
+.btn{
+    text-decoration: none; /*quita el subrayado al btn Ver menu*/
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: capitalize; /*primera letra de cada palabra es mayuscula*/
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+@media(min-width: 768px){
+    .btn{
+        font-size: 2.2rem;
+    }
+}
+
+.bordes{
+    border: 2.5px solid var(--blanco);
+}
+
+@media(min-width: 768px){
+    .bordes{
+        border: 4px solid var(--blanco);
+    }
+}
+
+.bordes:hover{
+    color: var(--verde);
+    background-color: var(--blanco);
+}
+
+.btn-negro{
+    background-color: var(--oscuro);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--parrafos);
+}
+.btn-negro:hover{
+    cursor: pointer;
+}
+/*encabezado*/
+.contenedor-navegacion{
+    background-color: var(--oscuro);
+    position: relative;
+    z-index: 5;
+}
+.contenido-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo h2, .navegacion a{
+    color: var(--blanco);
+    font-size: 4rem;
+    user-select: none; /*así queda el logo inseleccionable*/
+}
+.navegacion a:nth-child(even):hover{ /*hermanos pares pintados de rojo*/
+    color: var(--rojo);
+}
+.navegacion a:nth-child(odd):hover{ /*hermanos impares pintados de verde*/
+    color: var(--verde);
+}
+.navegacion a:first-of-type{
+    margin-top: 5rem;
+}
+.navegacion a{ /*enlaces*/
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    display: block;
+    transition: color .3s ease-in-out;
+    text-align: center;
+}
+
+@media(min-width:768px){
+    .navegacion a{
+        text-align: left;
+    }
+}
+
+.navegacion{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 40rem;
+    padding: 2rem 4rem;
+    background-color: var(--oscuro);
+    animation: desplazamiento .5s ease-in-out;
+}
+
+.expansive:hover{
+    cursor: pointer; /*aparece la manito al pasar el cursor por la barra expansiva*/
+}
+
+.expansive span{
+    background-color: var(--blanco);
+    display: block;
+    width: 5rem;
+    height: .4rem;
+    margin-bottom: 1rem;
+    margin-top: .8rem;
+}
+
+/*video*/
+.contenido-header{
+    position: relative;
+    user-select: none; /*inseleccionable "Ben arrivato"*/
+}
+
+.contenido-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+}
+
+.texto-encabezado{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-encabezado h2{
+    color: var(--blanco);
+    font-size: 4rem;
+}
+
+@media(min-width: 768){  /*de tablet hacia arriba*/
+    .texto-encabezado h2{
+        font-size: 8rem;
+    }
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*---------------quienes somos---------------*/
+
+/*alineación 50-50*/
+.contenedor-quienessomos{
+    padding-top: 5rem;
+}
+
+@media(min-width: 768px){
+    .contenedor-quienessomos{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.texto-quienessomos, .imagenes-quienessomos{
+    flex: 0 0 calc(50% - 1rem); /*grow, shrink, basis*/
+}
+/*alineación 50-50*/
+
+.imagenes-quienessomos{
+    display: flex;
+    justify-content: space-between;
+}
+.imagenes-quiennessomos img{
+    border-radius: 10px 100px / 120px;
+}
+.imagen1{
+    flex: 0 0 calc(50% -1rem);
+}
+
+.texto-quienessomos p{
+    font-size: 2rem;
+}
+
+.texto-quienessomos p{
+    text-align: center;
+}
+/*---------------quienes somos---------------*/
+
+/*---------------menu---------------*/
+.texto-platillos{
+    text-align: center;
+    font-size: 5rem;
+}
+
+.menu{
+    padding-top: 4rem;
+}
+
+.botones-platillos button{
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    border-radius: 5px
+    
+}
+.botones-platillos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.botones-platillos button{
+    flex: 0 0 calc(50% - 1rem);
+    padding: 1rem 3rem;
+}
+@media(min-width:768px){  /*alinear botones inlineblock en contextos md>*/
+    .botones-platillos{
+        display: inline-block;
+    }
+    .botones-platillos button{
+        flex: unset;
+    }
+    .platillos{
+        display: flex;  /*todo el menú queda en una sola row*/
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.platillo{
+    flex: 0 0 calc(33.3% - 1rem);  /*divide la row en 3 partes iguales,*/
+    border: 1px solid #e1e1e1;
+    padding: .4rem;
+    border-radius: 5px;
+}
+.platillo h2{
+    text-align: center;
+}
+.platillo p{
+    font-size: 1.8rem;
+}
+.precio{
+    display: flex;
+    justify-content: space-between;
+}
+.precio p{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.precio button{
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    font-family: var(--parrafos);
+}
+
+/*formulario contacto*/
+.formulario-contacto{
+    padding-top: 5rem;
+}
+
+@media(min-width: 768px){
+    .formulario-contacto{
+        display: flex;
+        height: 60rem;
+        font-size: 2.2rem;
+    }    
+}
+
+.informacion-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion-contacto, .formulario{
+    flex: 0 0 calc(50% - 1rem);
+}
+
+.informacion-contacto{
+    background-color: var(--oscuro);
+    padding: 2rem;
+}
+
+.informacion-contacto, .información-contacto{
+    color: var(--blanco);
+}
+
+.informacion-contacto h3{
+    font-size: 3rem;
+    text-align: center; /*se logró corregir la alineacion en dispositivos moviles*/
+}
+
+
+.informacion-contacto h3{
+    font-size: 4rem;
+    font-family: var(--titulos);
+}
+
+
+.informacion-contacto i{
+    margin-right: 1rem;
+}
+
+.formulario{
+    padding: 5rem;
+}
+
+.input-formulario label{
+    display: block;
+    font-size: 2rem;
+    font-family: var(--parrafos);
+    margin-bottom: 1.5rem;
+}
+
+.input-formulario input, .input-formulario textarea{
+    width: 100%;
+}
+.input-formulario input, .input-formulario textarea{
+    padding: 1rem 1.6rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    outline: none; /*quitar el borde negro del input*/
+    font-family: var(--parrafos);
+}
+.input-formulario textarea{
+    height: 9.8rem;
+    resize: none;/*el usuario no puede modificar el textarea*/
+}
+
+.footer
+{
+    text-align: center;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
